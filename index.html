@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/matrix-neo-man-white-512.webp" type="image/x-icon">
+    <title>andert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="video-wrapper">
+            <video id="introVideo" autoplay muted>
+            <source src="video/matrix.mp4" type="video/mp4">
+            </video>
+        
+            <video id="loopVideo" loop muted>
+                <source src="video/matrix_loop.mp4" type="video/mp4">
+            </video>
+
+            <video id="centerOverlay" muted playsinline >
+                <source src="video/center_matrix.mp4" type="video/mp4">
+            </video>
+            
+        
+            
+        </div>
+        
+        <div class="content">
+            <div class="content">
+                <div class="info-section">
+                    <div class="info-box">
+                        <h2>Our Vision</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
+                    </div>
+                    <div class="info-box">
+                        <h2>Our Mission</h2>
+                        <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper.</p>
+                    </div>
+                    <div class="info-box">
+                        <h2>Our Values</h2>
+                        <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+<script>
+    const intro = document.getElementById('introVideo');
+    const loop = document.getElementById('loopVideo');
+    const centerOverlay = document.getElementById('centerOverlay');
+
+    intro.addEventListener('play', () => {
+        setTimeout(() => {
+            intro.pause();
+            intro.style.display = 'none';
+            loop.style.display = 'block';
+            loop.play();
+            centerOverlay.style.display = 'block';
+            centerOverlay.play();
+
+            
+            setTimeout(() => {
+                centerOverlay.pause();
+                centerOverlay.currentTime = centerOverlay.duration;
+            }, 10000);
+        }, 4000);
+    });
+</script>
+
+</body>
+</html>
