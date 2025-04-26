@@ -24,4 +24,8 @@ Add an animated navigation menu.
 
 Make the website fully responsive for mobile devices.
 
+
+Author 😨: Gerther , https://github.com/Gerther 
+
+
 thanks for downloading 😍!
