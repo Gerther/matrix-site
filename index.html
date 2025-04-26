@@ -21,6 +21,28 @@
             <video id="centerOverlay" muted playsinline >
                 <source src="video/center_matrix.mp4" type="video/mp4">
             </video>
+
+            <nav class="top-menu" id="topMenu">
+                <ul class="menu-left">
+                    <li><a href="#about" class="menu-link">about</a></li>
+                    <li><a href="#services" class="menu-link">Services</a></li>
+                </ul>
+            
+                <div class="logo">
+                    <a href="#">
+                        <img class="logo-img , menu-link" src="image/buton/logo/matrix.png" alt="" width="110">
+                    </a>
+                </div>
+            
+                <ul class="menu-right">
+                    <li><a href="#portfolio" class="menu-link">Portfolio</a></li>
+                    <li><a href="#contact" class="menu-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            
+            
+
             
         
             
@@ -47,29 +69,6 @@
         </div>
 
         
-        
-<script>
-    const intro = document.getElementById('introVideo');
-    const loop = document.getElementById('loopVideo');
-    const centerOverlay = document.getElementById('centerOverlay');
-
-    intro.addEventListener('play', () => {
-        setTimeout(() => {
-            intro.pause();
-            intro.style.display = 'none';
-            loop.style.display = 'block';
-            loop.play();
-            centerOverlay.style.display = 'block';
-            centerOverlay.play();
-
-            
-            setTimeout(() => {
-                centerOverlay.pause();
-                centerOverlay.currentTime = centerOverlay.duration;
-            }, 10000);
-        }, 4000);
-    });
-</script>
-
+        <script src="script.js"></script>
 </body>
 </html>
