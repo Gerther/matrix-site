@@ -164,3 +164,6 @@ video {
     content: url('image/buton/logo/matrix_wt.png');
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
