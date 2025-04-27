@@ -172,20 +172,20 @@ video {
 
 @media (max-width: 768px) {
     .menu-container {
-        flex-direction: column; /* <-- СТАЛО ВЕРТИКАЛЬНО */
-        gap: 20px; /* Меньший отступ между элементами */
+        flex-direction: column; 
+        gap: 20px;
     }
 
     .menu-left, .menu-right {
-        flex-direction: column; /* <-- Списки тоже по вертикали */
-        gap: 15px; /* Отступы между пунктами */
-        align-items: center; /* Чтобы пункты стояли по центру */
+        flex-direction: column; 
+        gap: 15px; 
+        align-items: center; 
     }
 }
 
 @media (max-width: 768px) {
     #centerOverlay {
-        width: 90%; /* На телефонах чуть шире */
-        max-width: 400px; /* Ограничение на маленьких устройствах */
+        width: 90%; 
+        max-width: 400px; 
     }
 }
