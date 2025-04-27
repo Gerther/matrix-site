@@ -56,8 +56,8 @@ video {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50vw;
-    max-width: 800px;
+    width: 80%; /* Ширина зависит от экрана */
+    max-width: 800px; /* Максимальный размер */
     height: auto;
     transform: translate(-50%, -50%);
     z-index: 4;
@@ -120,13 +120,15 @@ video {
     color: #0e890e;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 500px;
+    justify-content: center;
+    gap: 50px;
     transition: top 0.5s ease;
     z-index: 100;
     backdrop-filter: blur(10px);
     opacity: 0.8;
+    padding: 0 20px;
 }
+
 
 .top-menu ul {
     list-style: none;
@@ -166,4 +168,24 @@ video {
 
 ::-webkit-scrollbar {
     width: 0;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column; /* <-- СТАЛО ВЕРТИКАЛЬНО */
+        gap: 20px; /* Меньший отступ между элементами */
+    }
+
+    .menu-left, .menu-right {
+        flex-direction: column; /* <-- Списки тоже по вертикали */
+        gap: 15px; /* Отступы между пунктами */
+        align-items: center; /* Чтобы пункты стояли по центру */
+    }
+}
+
+@media (max-width: 768px) {
+    #centerOverlay {
+        width: 90%; /* На телефонах чуть шире */
+        max-width: 400px; /* Ограничение на маленьких устройствах */
+    }
 }
